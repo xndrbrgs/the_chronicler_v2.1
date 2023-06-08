@@ -19,7 +19,7 @@ function Login() {
                 Sign in to your account
               </h1>
 
-              <div className="flex border rounded-lg p-5 hover:shadow-xl hover:scale-95 shadow-md transition items-center">
+              <div className="flex border rounded-lg p-5 hover:shadow-xl hover:scale-95 shadow-md transition items-center cursor-pointer">
                 <div className="border-r pr-2">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -35,7 +35,7 @@ function Login() {
               </div>
 
               <div
-                className="flex border rounded-lg p-5 hover:shadow-xl hover:scale-95 shadow-md transition items-center"
+                className="flex border rounded-lg p-5 hover:shadow-xl hover:scale-95 shadow-md transition items-center cursor-pointer"
                 onClick={() => signInWithGoogle()}
               >
                 <div className="border-r pr-2">
@@ -52,7 +52,7 @@ function Login() {
                 </div>
               </div>
 
-              <div className="flex border rounded-lg p-5 hover:shadow-xl hover:scale-95 shadow-md transition items-center">
+              <div className="flex border rounded-lg p-5 hover:shadow-xl hover:scale-95 shadow-md transition items-center cursor-pointer">
                 <div className="border-r pr-2">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

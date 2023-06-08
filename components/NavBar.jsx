@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import {
   MagnifyingGlassIcon,
@@ -10,6 +10,7 @@ import {
 import { Bars3Icon, UsersIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import { supabase } from "@/utils/supabaseClient";
+import { useSessionContext } from "@supabase/auth-helpers-react";
 
 function NavBar(placeholder) {
   const [searchInput, setSearchInput] = useState("");
@@ -21,7 +22,7 @@ function NavBar(placeholder) {
   async function signout() {
     const { error } = await supabase.auth.signOut();
   }
-
+  
   return (
     <div className="sticky top-0 z-50 grid grid-cols-3 bg-white shadow-md p-5 md:px-10 items-center">
       <div className="relative flex items-center my-auto">
@@ -54,6 +55,12 @@ function NavBar(placeholder) {
           <Bars3Icon className="h-6" />
           <UserCircleIcon className="h-6" />
         </div>
+        <Link href={"/login"}>
+          <button className="border p-2 rounded-lg shadow-sm hover:shadow-lg transition">
+            <h1 className="text-md">Log In</h1>
+          </button>
+        </Link>
+
         <button
           className="border p-2 rounded-lg shadow-sm hover:shadow-lg transition"
           onClick={() => signout()}
