@@ -7,14 +7,14 @@ import BooksCarousel from "@/components/BooksCarousel";
 
 import localFont from "next/font/local";
 
-const bigilla = localFont({
+const brier = localFont({
   src: [
     {
-      path: "../assets/fonts/Bigilla-Bold.otf",
+      path: "../assets/fonts/Brier-Bold.otf",
       display: "normal",
     },
     {
-      path: "../assets/fonts/Bigilla.otf",
+      path: "../assets/fonts/Brier-Regular.otf",
       display: "normal",
     },
   ],
@@ -29,7 +29,7 @@ export default async function Home() {
       <NavBar />
 
       <main className="bg-hero-pattern">
-        <div className={bigilla.className}>
+        <div className={brier.className}>
           <div className="flex items-center justify-center">
             <h1 className="text-7xl font-bold">Choose the books YOU want to read</h1>
           </div>

@@ -1,21 +1,26 @@
 import "./globals.css";
-import { Montserrat } from "next/font/google";
+import { Merriweather } from "next/font/google";
 import localFont from "next/font/local";
 
-const bigilla = localFont({
+const brier = localFont({
   src: [
     {
-      path: "../assets/fonts/Bigilla-Bold.otf",
+      path: "../assets/fonts/Brier-Bold.otf",
       display: "normal",
     },
     {
-      path: "../assets/fonts/Bigilla.otf",
+      path: "../assets/fonts/Brier-Regular.otf",
       display: "normal",
     },
   ],
 });
 
-const montserrat = Montserrat({ subsets: ["latin"] });
+const merriweather = Merriweather({
+  weight: ["400", "700"],
+  style: ["normal", "italic"],
+  subsets: ["latin"],
+  display: "swap",
+});
 
 export const metadata = {
   title: "The Chronicler",
@@ -25,7 +30,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={montserrat.className}>{children}</body>
+      <body className={merriweather.className}>{children}</body>
     </html>
   );
 }
